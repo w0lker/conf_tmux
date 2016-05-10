@@ -4,10 +4,7 @@ set -sg escape-time 1
 set -g base-index 1
 set -g history-limit 9999
 
-# 2.0之后
-set -g mouse on
-# 2.0之前
-#set -g mode-mouse on
+set -g mode-mouse on
 
 set -g status-left-length 40
 set -g status-right "#(date +%H:%M' ')"
