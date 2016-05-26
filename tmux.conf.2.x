@@ -4,7 +4,8 @@ set -sg escape-time 1
 set -g base-index 1
 set -g history-limit 9999
 
-set -g mouse on
+# support mouse
+#set -g mouse on
 
 set -g status-left-length 40
 set -g status-right "#(date +%H:%M' ')"
@@ -42,3 +43,12 @@ bind -r K resize-pane -U 5
 bind -r L resize-pane -R 5
 bind -t vi-copy v begin-selection
 bind -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy" 
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# plugin manager
+run '~/.tmux/plugins/tpm/tpm'
